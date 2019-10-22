@@ -1,37 +1,32 @@
 package controllers
 
 import (
-	"encoding/json"
+
+	"github.com/gin-gonic/gin"
 	"go-microservice/mvc/services"
 	"go-microservice/mvc/utils"
 	"net/http"
 	"strconv"
 )
 
-func GetUser(w http.ResponseWriter, r *http.Request){
-	userIdParam := r.URL.Query().Get("user_id")
-	userId, err := strconv.ParseInt(userIdParam, 10, 64)
+func GetUser(c *gin.Context){
+	userId, err := strconv.ParseInt(c.Param("user_id"), 10, 64)
 	if err != nil{
 		apiErr := &utils.ApplicationError{
 			Message:"user_id must be a number",
 			StatusCode:http.StatusBadRequest,
 			Code:"bad_request",
 		}
-		jsonValue, _ := json.Marshal(apiErr)
-		w.WriteHeader(apiErr.StatusCode)
-		w.Write(jsonValue)
+		utils.RespondErr(c, apiErr)
 		return
 	}
 
 	user, apiErr := services.UsersService.GetUser(userId)
 
 	if apiErr != nil{
-		jsonValue, _ := json.Marshal(apiErr)
-		w.WriteHeader(apiErr.StatusCode)
-		w.Write(jsonValue)
+		utils.RespondErr(c, apiErr)
 		return
 	}
-
-	jsonValue, _ := json.Marshal(user)
-	w.Write(jsonValue)
+	utils.Respond(c, http.StatusOK, user)
 }
+
