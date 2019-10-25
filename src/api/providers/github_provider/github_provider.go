@@ -54,5 +54,5 @@ func CreateRepo(accessToken string, request github.CreateRepoRequest)(*github.Cr
 		}
 	}
 
-	return  &github.CreateRepoResponse{}, nil
+	return &result, nil
 }
