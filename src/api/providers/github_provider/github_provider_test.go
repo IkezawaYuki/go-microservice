@@ -28,11 +28,6 @@ func TestGetAuthorizationHeader(t *testing.T){
 	assert.EqualValues(t, "token abc123", header)
 }
 
-func TestAuthorizationHeader(t *testing.T){
-	header := getAuthorizationHeader("abc123")
-	assert.EqualValues(t, "token abc123", header)
-}
-
 func TestCreateRepoErrorRestclient(t *testing.T) {
 	restclient.FlushMockups()
 	restclient.AddMockup(restclient.Mock{
