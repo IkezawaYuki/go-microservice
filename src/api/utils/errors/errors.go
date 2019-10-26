@@ -1,5 +1,7 @@
 package errors
 
+import "net/http"
+
 type ApiError interface {
 	Status() int
 	Message() string
@@ -22,4 +24,29 @@ func (e *apiError) Message() string {
 
 func (e *apiError) Error() string {
 	return e.error
+}
+
+func NewApiError(statusCode int, message string)ApiError{
+	return &apiError{status:statusCode, message:message}
+}
+
+func NewInternalServerError(message string)ApiError{
+	return &apiError{
+		status:http.StatusInternalServerError,
+		message:message,
+	}
+}
+
+func NewNotFoundError(message string)ApiError{
+	return &apiError{
+		status:http.StatusNotFound,
+		message:message,
+	}
+}
+
+func NewBadRequestError(message string)ApiError{
+	return &apiError{
+		status:http.StatusBadRequest,
+		message:message,
+	}
 }
