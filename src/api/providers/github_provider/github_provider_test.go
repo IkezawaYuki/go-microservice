@@ -17,6 +17,12 @@ func TestMain(m *testing.M){
 	os.Exit(m.Run())
 }
 
+func TestConstants(t *testing.T){
+	assert.EqualValues(t, "Authorization", headerAuthorization)
+	assert.EqualValues(t, "token %s", headerAuthorizationFormat)
+	assert.EqualValues(t, "https://api.github.com/user/repos",urlCreateRepo)
+}
+
 func TestGetAuthorizationHeader(t *testing.T){
 	header := getAuthorizationHeader("abc123")
 	assert.EqualValues(t, "token abc123", header)
@@ -61,7 +67,7 @@ func TestCreateRepoInvalidResponseBody(t *testing.T) {
 	assert.Nil(t, response)
 	assert.NotNil(t, err)
 	assert.EqualValues(t, http.StatusInternalServerError, err.StatusCode)
-	assert.EqualValues(t, "invalid resclient response", err.Message)
+	assert.EqualValues(t, "invalid response body", err.Message)
 
 }
 
@@ -130,5 +136,22 @@ func TestCreateRepoInvalidSuccessResponse(t *testing.T) {
 
 
 func TestCreateNoError(t *testing.T){
-	// todo
+	restclient.FlushMockups()
+
+	restclient.AddMockup(restclient.Mock{
+		Url:"https://api.github.com/user/repos",
+		HttpMethod:http.MethodPost,
+		Response:&http.Response{
+			StatusCode: http.StatusCreated,
+			Body: ioutil.NopCloser(strings.NewReader(`{"id": 123, "name": "golang-tutorial","full_name": "IkezawaYuki/golang-tutorial"}`)),
+		},
+	})
+
+	response, err := CreateRepo("", github.CreateRepoRequest{})
+
+	assert.Nil(t, err)
+	assert.NotNil(t, response)
+	assert.EqualValues(t, 123, response.Id)
+	assert.EqualValues(t, "golang-tutorial", response.Name)
+	assert.EqualValues(t, "IkezawaYuki/golang-tutorial", response.FullName)
 }
