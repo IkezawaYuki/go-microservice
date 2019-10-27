@@ -13,6 +13,7 @@ import (
 type reposService struct {}
 
 type reposServiceInterface interface {
+	CreateRepo(repositories.CreateRepoRequest) (*repositories.CreateRepoResponse, errors.ApiError)
 }
 
 var (
@@ -22,6 +23,7 @@ var (
 func init(){
 	RepositoryService = &reposService{}
 }
+
 
 func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*repositories.CreateRepoResponse, errors.ApiError){
 	input.Name = strings.TrimSpace(input.Name)
