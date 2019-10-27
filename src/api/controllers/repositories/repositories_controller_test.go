@@ -1,10 +1,12 @@
 package repositories
 
 import (
-	"github.com/gin-gonic/gin"
+	"encoding/json"
 	"github.com/stretchr/testify/assert"
 	"go-microservice/src/api/clients/restclient"
+	"go-microservice/src/api/domain/repositories"
 	"go-microservice/src/api/utils/errors"
+	"go-microservice/src/api/utils/test_utils"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -20,11 +22,9 @@ func TestMain(m *testing.M){
 
 
 func TestCreateRepoInvalidJsonRequest(t *testing.T) {
-	response := httptest.NewRecorder()
-	c, _ := gin.CreateTestContext(response)
-
 	request, _ := http.NewRequest(http.MethodPost, "/repositories", strings.NewReader(``))
-	c.Request = request
+	response := httptest.NewRecorder()
+	c := test_utils.GetMockedContext(request, response)
 
 	CreateRepo(c)
 
@@ -40,10 +40,9 @@ func TestCreateRepoInvalidJsonRequest(t *testing.T) {
 
 
 func TestCreateRepoErrorFromGithub(t *testing.T){
-	response := httptest.NewRecorder()
-	c, _ := gin.CreateTestContext(response)
 	request, _ := http.NewRequest(http.MethodPost, "/repositories", strings.NewReader(`{"name": "testing"}`))
-	c.Request = request
+	response := httptest.NewRecorder()
+	c := test_utils.GetMockedContext(request, response)
 
 	restclient.FlushMockups()
 
@@ -69,5 +68,37 @@ func TestCreateRepoErrorFromGithub(t *testing.T){
 }
 
 func TestCreateRepNoError(t *testing.T){
-	//todo
+	request, _ := http.NewRequest(http.MethodPost, "/repositories", strings.NewReader(`{"name": "testing"}`))
+	response := httptest.NewRecorder()
+	c := test_utils.GetMockedContext(request, response)
+
+	restclient.FlushMockups()
+	restclient.AddMockup(restclient.Mock{
+		Url:"https://api.github.com/user/repos",
+		HttpMethod:http.MethodPost,
+		Response:&http.Response{
+			StatusCode:http.StatusCreated,
+			Body:ioutil.NopCloser(strings.NewReader(`{"id": 123}`)),
+		},
+	})
+
+	CreateRepo(c)
+
+	assert.EqualValues(t, http.StatusCreated, response.Code)
+
+	var result repositories.CreateRepoResponse
+	err := json.Unmarshal(response.Body.Bytes(), &result)
+	assert.Nil(t, err)
+	assert.EqualValues(t, 123, result.Id)
+	assert.EqualValues(t, "", result.Name)
+	assert.EqualValues(t, "",result.Owner)
 }
+
+
+
+
+
+
+
+
+
