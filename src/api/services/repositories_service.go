@@ -13,7 +13,8 @@ import (
 type reposService struct {}
 
 type reposServiceInterface interface {
-	CreateRepo(repositories.CreateRepoRequest) (*repositories.CreateRepoResponse, errors.ApiError)
+	CreateRepo(request repositories.CreateRepoRequest) (*repositories.CreateRepoResponse, errors.ApiError)
+	CreateRepos(request repositories.CreateRepoRequest)([]repositories.CreateReposResponse, errors.ApiError)
 }
 
 var (
@@ -47,6 +48,9 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 		Name: response.Name,
 		Owner:response.Owner.Login,
 	}
-
 	return &result, nil
+}
+
+func (s *reposService) CreateRepos(request repositories.CreateRepoRequest)([]repositories.CreateReposResponse, errors.ApiError)  {
+
 }
