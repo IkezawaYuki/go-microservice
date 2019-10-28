@@ -15,4 +15,9 @@ func TestGetMockedContext(t *testing.T) {
 
 	assert.EqualValues(t, http.MethodGet, c.Request.Method)
 	assert.EqualValues(t, "123", c.Request.URL.Port())
+	assert.EqualValues(t, "/something", c.Request.URL.Path)
+	assert.EqualValues(t, "http", c.Request.URL.Scheme)
+	assert.EqualValues(t, 1, len(c.Request.Header))
+	assert.EqualValues(t, "true", c.GetHeader("x-mock"))
+	assert.EqualValues(t, "true", c.GetHeader("X-Mock"))
 }
