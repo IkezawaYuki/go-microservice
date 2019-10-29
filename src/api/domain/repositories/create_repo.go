@@ -7,6 +7,13 @@ type CreateRepoRequest struct {
 	Description string `json:"description"`
 }
 
+func (r *CreateRepoRequest) Validate() errors.ApiError{
+
+	// todo
+
+	return nil
+}
+
 type CreateRepoResponse struct {
 	Id int64 `json:"id"`
 	Owner string `json:"owner"`
@@ -14,6 +21,11 @@ type CreateRepoResponse struct {
 }
 
 type CreateReposResponse struct {
-	Response CreateRepoResponse `json:"repo"`
+	StatusCode int `json:"status_code"`
+	Result    []CreateResponsitoriesResult `json:"result"`
+}
+
+type CreateResponsitoriesResult struct {
+	Response CreateRepoResponse `json:"response"`
 	Error errors.ApiError `json:"error"`
 }

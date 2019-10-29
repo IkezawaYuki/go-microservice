@@ -14,7 +14,7 @@ type reposService struct {}
 
 type reposServiceInterface interface {
 	CreateRepo(request repositories.CreateRepoRequest) (*repositories.CreateRepoResponse, errors.ApiError)
-	CreateRepos(request repositories.CreateRepoRequest)([]repositories.CreateReposResponse, errors.ApiError)
+	CreateRepos(request []repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)
 }
 
 var (
@@ -51,6 +51,6 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 	return &result, nil
 }
 
-func (s *reposService) CreateRepos(request repositories.CreateRepoRequest)([]repositories.CreateReposResponse, errors.ApiError)  {
+func (s *reposService) CreateRepos(request repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)  {
 
 }
