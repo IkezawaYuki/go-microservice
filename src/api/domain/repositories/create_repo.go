@@ -1,6 +1,9 @@
 package repositories
 
-import "go-microservice/src/api/utils/errors"
+import (
+	"go-microservice/src/api/utils/errors"
+	"strings"
+)
 
 type CreateRepoRequest struct {
 	Name string `json:"name"`
@@ -8,9 +11,10 @@ type CreateRepoRequest struct {
 }
 
 func (r *CreateRepoRequest) Validate() errors.ApiError{
-
-	// todo
-
+	r.Name = strings.TrimSpace(r.Name)
+	if r.Name == ""{
+		return errors.NewBadRequestError("invalid repository name")
+	}
 	return nil
 }
 
@@ -22,10 +26,10 @@ type CreateRepoResponse struct {
 
 type CreateReposResponse struct {
 	StatusCode int `json:"status_code"`
-	Result    []CreateResponsitoriesResult `json:"result"`
+	Results    []CreateReponsitoriesResult `json:"result"`
 }
 
-type CreateResponsitoriesResult struct {
-	Response CreateRepoResponse `json:"response"`
+type CreateReponsitoriesResult struct {
+	Response *CreateRepoResponse `json:"response"`
 	Error errors.ApiError `json:"error"`
 }

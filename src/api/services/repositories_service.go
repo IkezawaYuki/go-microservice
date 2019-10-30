@@ -27,6 +27,10 @@ func init(){
 
 
 func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*repositories.CreateRepoResponse, errors.ApiError){
+	if err := input.Validate(); err != nil{
+		return nil, err
+	}
+
 	input.Name = strings.TrimSpace(input.Name)
 	if input.Name == ""{
 		return nil, errors.NewBadRequestError("invalid repository name")
@@ -51,6 +55,44 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 	return &result, nil
 }
 
-func (s *reposService) CreateRepos(request repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)  {
+func (s *reposService) CreateRepos(request []repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)  {
+	input := make(chan repositories.CreateReponsitoriesResult)
+	output := make(chan repositories.CreateReposResponse)
 
+	// todo 53:14
+	go s.handleRepoResults(input, output)
+
+	for _, current := range request{
+		go s.createRepoConcurrent(current, input)
+	}
+
+	result := <- output
+	return result, nil
+}
+
+func (s *reposService) handleRepoResults(input chan repositories.CreateReponsitoriesResult, output chan repositories.CreateReposResponse){
+	var results repositories.CreateReposResponse
+	for incomingEvent := range input{
+		repoResult := repositories.CreateReponsitoriesResult{
+			Response:incomingEvent.Response,
+			Error:incomingEvent.Error,
+		}
+		results.Results = append(results.Results, repoResult)
+	}
+	output <- results
+}
+
+func (s *reposService) createRepoConcurrent(input repositories.CreateRepoRequest, output chan repositories.CreateReponsitoriesResult){
+	if err := input.Validate(); err != nil{
+		output <- repositories.CreateReponsitoriesResult{Error: err}
+		return
+	}
+
+	result, err := s.CreateRepo(input)
+	if err != nil{
+		output <- repositories.CreateReponsitoriesResult{Error:err}
+		return
+	}
+
+	output <- repositories.CreateReponsitoriesResult{Response: result}
 }
