@@ -6,6 +6,7 @@ import (
 	"go-microservice/src/api/domain/repositories"
 	"go-microservice/src/api/providers/github_provider"
 	"go-microservice/src/api/utils/errors"
+	"sync"
 
 	"strings"
 )
@@ -58,19 +59,25 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 func (s *reposService) CreateRepos(request []repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)  {
 	input := make(chan repositories.CreateReponsitoriesResult)
 	output := make(chan repositories.CreateReposResponse)
+	defer close(output)
 
-	// todo 53:14
-	go s.handleRepoResults(input, output)
+	var wg sync.WaitGroup
+
+	go s.handleRepoResults(&wg, input, output)
 
 	for _, current := range request{
+		wg.Add(1)
 		go s.createRepoConcurrent(current, input)
 	}
+
+	wg.Wait()
+	close(input)
 
 	result := <- output
 	return result, nil
 }
 
-func (s *reposService) handleRepoResults(input chan repositories.CreateReponsitoriesResult, output chan repositories.CreateReposResponse){
+func (s *reposService) handleRepoResults(wg *sync.WaitGroup, input chan repositories.CreateReponsitoriesResult, output chan repositories.CreateReposResponse){
 	var results repositories.CreateReposResponse
 	for incomingEvent := range input{
 		repoResult := repositories.CreateReponsitoriesResult{
@@ -78,6 +85,7 @@ func (s *reposService) handleRepoResults(input chan repositories.CreateReponsito
 			Error:incomingEvent.Error,
 		}
 		results.Results = append(results.Results, repoResult)
+		wg.Done()
 	}
 	output <- results
 }
