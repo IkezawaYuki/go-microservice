@@ -44,7 +44,6 @@ func AddMockup(mock Mock){
 func Post(url string, body interface{}, headers http.Header)(*http.Response, error){
 	if enableMocks{
 		mock := mocks[getMockId(http.MethodPost, url)]
-		fmt.Println(mock)
 		if mock == nil{
 			return nil, errors.New("no mock found for give request")
 		}
