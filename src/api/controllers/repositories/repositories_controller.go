@@ -1,6 +1,7 @@
 package repositories
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"go-microservice/src/api/domain/repositories"
 	"go-microservice/src/api/services"
@@ -28,6 +29,7 @@ func CreateRepo(c *gin.Context){
 func CreateRepos(c *gin.Context){
 	var request []repositories.CreateRepoRequest
 	if err := c.ShouldBindJSON(&request); err != nil{
+		fmt.Println("invalid json body")
 		apiErr := errors.NewBadRequestError("invalid json body")
 		c.JSON(apiErr.Status(), apiErr)
 		return

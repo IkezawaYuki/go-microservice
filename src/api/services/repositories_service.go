@@ -6,6 +6,7 @@ import (
 	"go-microservice/src/api/domain/repositories"
 	"go-microservice/src/api/providers/github_provider"
 	"go-microservice/src/api/utils/errors"
+	"net/http"
 	"sync"
 
 	"strings"
@@ -56,7 +57,7 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 	return &result, nil
 }
 
-func (s *reposService) CreateRepos(request []repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)  {
+func (s *reposService) CreateRepos(requests []repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)  {
 	input := make(chan repositories.CreateReponsitoriesResult)
 	output := make(chan repositories.CreateReposResponse)
 	defer close(output)
@@ -65,7 +66,7 @@ func (s *reposService) CreateRepos(request []repositories.CreateRepoRequest)(rep
 
 	go s.handleRepoResults(&wg, input, output)
 
-	for _, current := range request{
+	for _, current := range requests{
 		wg.Add(1)
 		go s.createRepoConcurrent(current, input)
 	}
@@ -74,6 +75,21 @@ func (s *reposService) CreateRepos(request []repositories.CreateRepoRequest)(rep
 	close(input)
 
 	result := <- output
+
+	successCreation := 0
+	for _, current := range result.Results{
+		if current.Response != nil{
+			successCreation++
+		}
+	}
+	if successCreation == 0{
+		result.StatusCode = result.Results[0].Error.Status()
+	} else if successCreation == len(requests){
+		result.StatusCode = http.StatusCreated
+	}else{
+		result.StatusCode = http.StatusPartialContent
+	}
+
 	return result, nil
 }
 
