@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="740995d4-aff6-47c9-8b2c-05e02c73199d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/api/clients/restclient/restclient.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/clients/restclient/restclient.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/services/repositories_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/repositories_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/services/repositories_service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/repositories_service_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="175" column="4" selection-start-line="175" selection-start-column="4" selection-end-line="175" selection-end-column="4" />
+            <state relative-caret-position="470">
+              <caret line="214" column="15" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -281,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestCreateReposSingleRequest in go-microservice/src/api/services">
+  <component name="RunManager" selected="Go Test.TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services">
     <configuration name="go build go-microservice" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="go-microservice" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -290,17 +287,6 @@
       <filePath value="$PROJECT_DIR$/|$PROJECT_DIR$/introduction/webserver/main.go" />
       <package value="go-microservice" />
       <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestCreateRepoConcurrentErrorFromGithub in go-microservice/src/api/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-microservice" />
-      <working_directory value="$PROJECT_DIR$/src/api/services" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go-microservice/src/api/services" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestCreateRepoConcurrentErrorFromGithub$" />
       <method v="2" />
     </configuration>
     <configuration name="TestCreateRepoConcurrentNoError in go-microservice/src/api/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -312,6 +298,17 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestCreateRepoConcurrentNoError$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice" />
+      <working_directory value="$PROJECT_DIR$/src/api/services" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-microservice/src/api/services" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestCreateReposOneSuccessOneFaile$" />
       <method v="2" />
     </configuration>
     <configuration name="TestCreateReposSingleRequest in go-microservice/src/api/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -349,34 +346,22 @@
     <list>
       <item itemvalue="Go Build.go build go-microservice" />
       <item itemvalue="Go Test.repositories_service_test.go" />
-      <item itemvalue="Go Test.TestCreateRepoConcurrentErrorFromGithub in go-microservice/src/api/services" />
       <item itemvalue="Go Test.TestCreateRepoConcurrentNoError in go-microservice/src/api/services" />
       <item itemvalue="Go Test.TestHandleRepoResult in go-microservice/src/api/services" />
       <item itemvalue="Go Test.TestCreateReposSingleRequest in go-microservice/src/api/services" />
+      <item itemvalue="Go Test.TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" />
         <item itemvalue="Go Test.TestCreateReposSingleRequest in go-microservice/src/api/services" />
         <item itemvalue="Go Test.TestHandleRepoResult in go-microservice/src/api/services" />
         <item itemvalue="Go Test.repositories_service_test.go" />
         <item itemvalue="Go Test.TestCreateRepoConcurrentNoError in go-microservice/src/api/services" />
-        <item itemvalue="Go Test.TestCreateRepoConcurrentErrorFromGithub in go-microservice/src/api/services" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGetMockedContext_in_go-microservice_src_api_utils_test_utils - 2019.10.28 at 20h 31m 05s.xml">
-      <configuration name="TestGetMockedContext in go-microservice/src/api/utils/test_utils" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="repositories_service_test_go - 2019.11.02 at 14h 22m 36s.xml">
-      <configuration name="repositories_service_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCreateRepoConcurrentInvalidRequest_in_go-microservice_src_api_services - 2019.11.02 at 15h 34m 56s.xml">
-      <configuration name="TestCreateRepoConcurrentInvalidRequest in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCreateRepoConcurrentErrorFromGithub_in_go-microservice_src_api_services - 2019.11.02 at 15h 44m 20s.xml">
-      <configuration name="TestCreateRepoConcurrentErrorFromGithub in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestCreateRepoConcurrentErrorFromGithub_in_go-microservice_src_api_services - 2019.11.02 at 15h 45m 13s.xml">
       <configuration name="TestCreateRepoConcurrentErrorFromGithub in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -395,17 +380,29 @@
     <history-entry file="TestHandleRepoResult_in_go-microservice_src_api_services - 2019.11.02 at 16h 40m 05s.xml">
       <configuration name="TestHandleRepoResult in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestCreateReposSingleRequest_in_go-microservice_src_api_services - 2019.11.02 at 17h 01m 12s.xml">
+      <configuration name="TestCreateReposSingleRequest in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCreateReposSingleRequest_in_go-microservice_src_api_services - 2019.11.02 at 22h 50m 55s.xml">
+      <configuration name="TestCreateReposSingleRequest in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCreateReposSingleRequest_in_go-microservice_src_api_services - 2019.11.02 at 22h 54m 05s.xml">
+      <configuration name="TestCreateReposSingleRequest in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCreateReposOneSuccessOneFaile_in_go-microservice_src_api_services - 2019.11.02 at 22h 58m 00s.xml">
+      <configuration name="TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23748212" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993515" visible="true" weight="0.3048193" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993515" visible="true" weight="0.3048193" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.50453955" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -792,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="175" column="4" selection-start-line="175" selection-start-column="4" selection-end-line="175" selection-end-column="4" />
+        <state relative-caret-position="470">
+          <caret line="214" column="15" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="15" />
         </state>
       </provider>
     </entry>
