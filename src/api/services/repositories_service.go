@@ -5,7 +5,7 @@ import (
 	"go-microservice/src/api/config"
 	"go-microservice/src/api/domain/github"
 	"go-microservice/src/api/domain/repositories"
-	"go-microservice/src/api/log"
+	"go-microservice/src/api/log/option_a"
 	"go-microservice/src/api/providers/github_provider"
 	"go-microservice/src/api/utils/errors"
 	"net/http"
@@ -46,13 +46,13 @@ func (s *reposService) CreateRepo(clientId string, input repositories.CreateRepo
 		Description:input.Description,
 		Private:false,
 	}
-	log.Info("about to send request to external api", fmt.Sprintf("clientId:%s", clientId), "status:pending")
+	option_a.Info("about to send request to external api", fmt.Sprintf("clientId:%s", clientId), "status:pending")
 	response, err := github_provider.CreateRepo(config.GetGithubAccessToken(), request)
 	if err != nil{
-		log.Error("response obtained from external api", err, fmt.Sprintf("clientId:%s", clientId), "status:error")
+		option_a.Error("response obtained from external api", err, fmt.Sprintf("clientId:%s", clientId), "status:error")
 		return nil, errors.NewApiError(err.StatusCode, err.Message)
 	}
-	log.Info("response obtained from external api", fmt.Sprintf("clientId:%s", clientId), "status:success")
+	option_a.Info("response obtained from external api", fmt.Sprintf("clientId:%s", clientId), "status:success")
 	result := repositories.CreateRepoResponse{
 		Id: response.Id,
 		Name: response.Name,

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="740995d4-aff6-47c9-8b2c-05e02c73199d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/log/logger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/log/option_b/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrency/tools.go" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency/tools.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/app/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/app/application.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/domain/github/github_error.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/domain/github/github_error.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/log/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/log/option_a/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/services/repositories_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/repositories_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/src/api/config/config.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -41,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+            <state relative-caret-position="231">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -54,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/api/providers/github_provider/github_provider.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -78,10 +74,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/log/logger.go">
+        <entry file="file://$PROJECT_DIR$/src/api/log/option_a/logger.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+            <state relative-caret-position="240">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/api/log/option_b/logger.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -166,9 +171,11 @@
         <option value="$PROJECT_DIR$/src/api/app/application.go" />
         <option value="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" />
         <option value="$PROJECT_DIR$/src/api/config/config.go" />
-        <option value="$PROJECT_DIR$/src/api/log/logger.go" />
         <option value="$PROJECT_DIR$/src/api/services/repositories_service.go" />
         <option value="$PROJECT_DIR$/src/api/domain/github/github_error.go" />
+        <option value="$PROJECT_DIR$/src/api/log/logger.go" />
+        <option value="$PROJECT_DIR$/src/api/log/option_a/logger.go" />
+        <option value="$PROJECT_DIR$/src/api/log/option_b/logger.go" />
       </list>
     </option>
   </component>
@@ -238,6 +245,22 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+              <item name="option_a" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+              <item name="option_b" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -267,6 +290,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/api/log/option_a" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/mvc" />
     </key>
@@ -347,11 +371,11 @@
     </configuration>
     <list>
       <item itemvalue="Go Build.go build go-microservice" />
+      <item itemvalue="Go Build.go build tools.go" />
+      <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Go Test.TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" />
       <item itemvalue="Go Test.TestCreateReposAllSuccess in go-microservice/src/api/services" />
-      <item itemvalue="Go Build.go build tools.go" />
       <item itemvalue="Go Test.TestMutex in go-microservice/src/api/utils/test_utils" />
-      <item itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list>
@@ -399,12 +423,12 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993515" visible="true" weight="0.3048193" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993515" weight="0.3048193" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.50453955" weight="0.39759037" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -412,7 +436,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.25180724" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25180724" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5006485" side_tool="true" weight="0.3739726" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -429,13 +453,6 @@
     <SUITE FILE_PATH="coverage/go_microservice$repositories_service_test_go.out" NAME="repositories_service_test.go Coverage Results" MODIFIED="1572749883192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mvc/services/items_service.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mvc/domain/item.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -760,21 +777,14 @@
     <entry file="file://$PROJECT_DIR$/src/api/config/config.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/log/logger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/providers/github_provider/github_provider.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -794,8 +804,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        <state relative-caret-position="231">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/log/option_a/logger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/log/option_b/logger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
