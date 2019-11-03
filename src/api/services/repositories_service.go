@@ -5,6 +5,7 @@ import (
 	"go-microservice/src/api/config"
 	"go-microservice/src/api/domain/github"
 	"go-microservice/src/api/domain/repositories"
+	"go-microservice/src/api/log"
 	"go-microservice/src/api/providers/github_provider"
 	"go-microservice/src/api/utils/errors"
 	"net/http"
@@ -16,7 +17,7 @@ import (
 type reposService struct {}
 
 type reposServiceInterface interface {
-	CreateRepo(request repositories.CreateRepoRequest) (*repositories.CreateRepoResponse, errors.ApiError)
+	CreateRepo(clientId string,request repositories.CreateRepoRequest) (*repositories.CreateRepoResponse, errors.ApiError)
 	CreateRepos(request []repositories.CreateRepoRequest)(repositories.CreateReposResponse, errors.ApiError)
 }
 
@@ -29,7 +30,7 @@ func init(){
 }
 
 
-func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*repositories.CreateRepoResponse, errors.ApiError){
+func (s *reposService) CreateRepo(clientId string, input repositories.CreateRepoRequest)(*repositories.CreateRepoResponse, errors.ApiError){
 	if err := input.Validate(); err != nil{
 		return nil, err
 	}
@@ -39,20 +40,19 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 	if input.Name == ""{
 		return nil, errors.NewBadRequestError("invalid repository name")
 	}
-	fmt.Println("命名規則クリア")
 
 	request := github.CreateRepoRequest{
 		Name:input.Name,
 		Description:input.Description,
 		Private:false,
 	}
-
+	log.Info("about to send request to external api", fmt.Sprintf("clientId:%s", clientId), "status:pending")
 	response, err := github_provider.CreateRepo(config.GetGithubAccessToken(), request)
 	if err != nil{
+		log.Error("response obtained from external api", err, fmt.Sprintf("clientId:%s", clientId), "status:error")
 		return nil, errors.NewApiError(err.StatusCode, err.Message)
 	}
-
-
+	log.Info("response obtained from external api", fmt.Sprintf("clientId:%s", clientId), "status:success")
 	result := repositories.CreateRepoResponse{
 		Id: response.Id,
 		Name: response.Name,

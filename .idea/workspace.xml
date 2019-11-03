@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="740995d4-aff6-47c9-8b2c-05e02c73199d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/log/logger.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concurrency/tools.go" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency/tools.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/app/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/app/application.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/domain/github/github_error.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/domain/github/github_error.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/services/repositories_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/repositories_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/services/repositories_service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/services/repositories_service_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +23,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/config/config.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service_test.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
@@ -25,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+            <state relative-caret-position="201">
+              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -37,35 +53,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/providers/github_provider/github_provider.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/Cellar/go/1.13.1/libexec/src/testing/testing.go">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="873" selection-start-line="873" selection-end-line="873" />
+              <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go">
+        <entry file="file://$PROJECT_DIR$/src/api/domain/github/create_repo.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+            <state relative-caret-position="30">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/clients/restclient/restclient.go">
+        <entry file="file://$PROJECT_DIR$/src/api/domain/github/github_error.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+            <state relative-caret-position="150">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/log/logger.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/api/app/url_mappings.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <folding>
+                <element signature="e#13#119#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,6 +113,7 @@
       <find>invalid resclient response</find>
       <find>TestCreateRepoInvalidResponseBody</find>
       <find>done</find>
+      <find>CreateRepo</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.13.1/libexec" />
@@ -117,13 +146,10 @@
         <option value="$PROJECT_DIR$/src/api/api.go" />
         <option value="$PROJECT_DIR$/src/api.go" />
         <option value="$PROJECT_DIR$/src/api/domain/github/create_repo_test.go" />
-        <option value="$PROJECT_DIR$/src/api/domain/github/github_error.go" />
         <option value="$PROJECT_DIR$/src/api/providers/github_provider/github_provider.go" />
         <option value="$PROJECT_DIR$/src/api/providers/github_provider/github_provider_test.go" />
         <option value="$PROJECT_DIR$/src/api/main.go" />
-        <option value="$PROJECT_DIR$/src/api/app/application.go" />
         <option value="$PROJECT_DIR$/src/api/domain/github/create_repo.go" />
-        <option value="$PROJECT_DIR$/src/api/config/config.go" />
         <option value="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controllers.go" />
         <option value="$PROJECT_DIR$/src/api/utils/errors/errors.go" />
         <option value="$PROJECT_DIR$/src/api/utils/test_utils/test_utils.go" />
@@ -131,14 +157,18 @@
         <option value="$PROJECT_DIR$/src/api/controllers/polo/polo_controller.go" />
         <option value="$PROJECT_DIR$/src/api/controllers/polo/polo_controller_test.go" />
         <option value="$PROJECT_DIR$/src/api/config/config_test.go" />
-        <option value="$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go" />
-        <option value="$PROJECT_DIR$/concurrency/tools.go" />
         <option value="$PROJECT_DIR$/src/api/app/url_mappings.go" />
         <option value="$PROJECT_DIR$/src/api/domain/repositories/create_repo.go" />
-        <option value="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" />
         <option value="$PROJECT_DIR$/src/api/clients/restclient/restclient.go" />
-        <option value="$PROJECT_DIR$/src/api/services/repositories_service.go" />
         <option value="$PROJECT_DIR$/src/api/services/repositories_service_test.go" />
+        <option value="$PROJECT_DIR$/concurrency/tools.go" />
+        <option value="$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go" />
+        <option value="$PROJECT_DIR$/src/api/app/application.go" />
+        <option value="$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go" />
+        <option value="$PROJECT_DIR$/src/api/config/config.go" />
+        <option value="$PROJECT_DIR$/src/api/log/logger.go" />
+        <option value="$PROJECT_DIR$/src/api/services/repositories_service.go" />
+        <option value="$PROJECT_DIR$/src/api/domain/github/github_error.go" />
       </list>
     </option>
   </component>
@@ -160,22 +190,6 @@
             <path>
               <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="mvc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="mvc" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
@@ -207,29 +221,6 @@
               <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="polo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -238,29 +229,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-              <item name="github_provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-microservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-microservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -307,13 +283,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestCreateReposAllSuccess in go-microservice/src/api/services">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build go-microservice" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="go-microservice" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/|$PROJECT_DIR$/introduction/webserver/main.go" />
+      <package value="go-microservice" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/api/main.go" />
+      <package value="go-microservice" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build tools.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-microservice" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/concurrency/tools.go" />
       <package value="go-microservice" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -340,72 +334,36 @@
       <pattern value="^TestCreateReposOneSuccessOneFaile$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCreateReposSingleRequest in go-microservice/src/api/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMutex in go-microservice/src/api/utils/test_utils" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-microservice" />
-      <working_directory value="$PROJECT_DIR$/src/api/services" />
+      <working_directory value="$PROJECT_DIR$/src/api/utils/test_utils" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="go-microservice/src/api/services" />
+      <package value="go-microservice/src/api/utils/test_utils" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestCreateReposSingleRequest$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestHandleRepoResult in go-microservice/src/api/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-microservice" />
-      <working_directory value="$PROJECT_DIR$/src/api/services" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go-microservice/src/api/services" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestHandleRepoResult$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="repositories_service_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-microservice" />
-      <working_directory value="$PROJECT_DIR$/src/api/services" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <package value="go-microservice" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/src/api/services/repositories_service_test.go" />
+      <pattern value="^TestMutex$" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Go Build.go build go-microservice" />
-      <item itemvalue="Go Test.repositories_service_test.go" />
-      <item itemvalue="Go Test.TestHandleRepoResult in go-microservice/src/api/services" />
-      <item itemvalue="Go Test.TestCreateReposSingleRequest in go-microservice/src/api/services" />
       <item itemvalue="Go Test.TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" />
       <item itemvalue="Go Test.TestCreateReposAllSuccess in go-microservice/src/api/services" />
+      <item itemvalue="Go Build.go build tools.go" />
+      <item itemvalue="Go Test.TestMutex in go-microservice/src/api/utils/test_utils" />
+      <item itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Test.TestMutex in go-microservice/src/api/utils/test_utils" />
+        <item itemvalue="Go Build.go build tools.go" />
         <item itemvalue="Go Test.TestCreateReposAllSuccess in go-microservice/src/api/services" />
         <item itemvalue="Go Test.TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" />
-        <item itemvalue="Go Test.repositories_service_test.go" />
-        <item itemvalue="Go Test.TestCreateReposSingleRequest in go-microservice/src/api/services" />
-        <item itemvalue="Go Test.TestHandleRepoResult in go-microservice/src/api/services" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCreateReposOneSuccessOneFaile_in_go-microservice_src_api_services - 2019.11.03 at 12h 18m 30s.xml">
-      <configuration name="TestCreateReposOneSuccessOneFaile in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCreateReposAllSuccess_in_go-microservice_src_api_services - 2019.11.03 at 12h 18m 41s.xml">
-      <configuration name="TestCreateReposAllSuccess in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCreateReposAllSuccess_in_go-microservice_src_api_services - 2019.11.03 at 12h 21m 07s.xml">
-      <configuration name="TestCreateReposAllSuccess in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCreateReposAllSuccess_in_go-microservice_src_api_services - 2019.11.03 at 12h 23m 07s.xml">
-      <configuration name="TestCreateReposAllSuccess in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCreateReposAllSuccess_in_go-microservice_src_api_services - 2019.11.03 at 12h 26m 09s.xml">
-      <configuration name="TestCreateReposAllSuccess in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestCreateReposAllSuccess_in_go-microservice_src_api_services - 2019.11.03 at 12h 27m 46s.xml">
       <configuration name="TestCreateReposAllSuccess in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -421,17 +379,32 @@
     <history-entry file="TestCreateReposAllSuccess_in_go-microservice_src_api_services - 2019.11.03 at 12h 35m 51s.xml">
       <configuration name="TestCreateReposAllSuccess in go-microservice/src/api/services" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestMutex_in_go-microservice_src_api_utils_test_utils - 2019.11.03 at 16h 50m 52s.xml">
+      <configuration name="TestMutex in go-microservice/src/api/utils/test_utils" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestMutex_in_go-microservice_src_api_utils_test_utils - 2019.11.03 at 16h 51m 40s.xml">
+      <configuration name="TestMutex in go-microservice/src/api/utils/test_utils" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestMutex_in_go-microservice_src_api_utils_test_utils - 2019.11.03 at 16h 52m 45s.xml">
+      <configuration name="TestMutex in go-microservice/src/api/utils/test_utils" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestMutex_in_go-microservice_src_api_utils_test_utils - 2019.11.03 at 16h 59m 33s.xml">
+      <configuration name="TestMutex in go-microservice/src/api/utils/test_utils" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestMutex_in_go-microservice_src_api_utils_test_utils - 2019.11.03 at 16h 59m 39s.xml">
+      <configuration name="TestMutex in go-microservice/src/api/utils/test_utils" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26466382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993515" visible="true" weight="0.3048193" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993515" visible="true" weight="0.3048193" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.50453955" weight="0.39759037" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -456,44 +429,6 @@
     <SUITE FILE_PATH="coverage/go_microservice$repositories_service_test_go.out" NAME="repositories_service_test.go Coverage Results" MODIFIED="1572749883192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../github.com/gin-gonic/gin/tree.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/domain/user_dao_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#16#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/utils/controller_utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvc/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mvc/services/items_service.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -547,13 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/domain/github/github_error.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -630,20 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/domain/github/create_repo.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/utils/test_utils/test_utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/providers/github_provider/github_provider_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -675,20 +589,6 @@
           <folding>
             <element signature="e#16#75#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/concurrency/tools.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -740,37 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/app/application.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/app/url_mappings.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="53" lean-forward="true" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <element signature="e#13#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/clients/restclient/restclient.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -788,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/go/1.13.1/libexec/src/testing/testing.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -802,24 +664,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service.go">
+    <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        <state relative-caret-position="500">
+          <caret line="253" column="3" selection-start-line="224" selection-start-column="2" selection-end-line="253" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.13.1/libexec/src/os/file_unix.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.13.1/libexec/src/os/types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.13.1/libexec/src/os/file.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="278" column="27" selection-start-line="278" selection-start-column="27" selection-end-line="278" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/utils/test_utils/test_utils_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/sirupsen/logrus/logrus.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/utils/test_utils/test_utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/concurrency/tools.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#14#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/app/application.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="e#13#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/controllers/repositories/repositories_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/app/url_mappings.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="e#13#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/log/logger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/providers/github_provider/github_provider.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="184">
+          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service_test.go">
+    <entry file="file://$PROJECT_DIR$/src/api/domain/github/create_repo.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="253" column="3" selection-start-line="224" selection-start-column="2" selection-end-line="253" selection-end-column="3" />
+        <state relative-caret-position="30">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/domain/github/github_error.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/services/repositories_service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
         </state>
       </provider>
     </entry>
