@@ -1,6 +1,7 @@
 package services
 
 import (
+	"fmt"
 	"go-microservice/src/api/config"
 	"go-microservice/src/api/domain/github"
 	"go-microservice/src/api/domain/repositories"
@@ -33,10 +34,12 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 		return nil, err
 	}
 
+
 	input.Name = strings.TrimSpace(input.Name)
 	if input.Name == ""{
 		return nil, errors.NewBadRequestError("invalid repository name")
 	}
+	fmt.Println("命名規則クリア")
 
 	request := github.CreateRepoRequest{
 		Name:input.Name,
@@ -48,6 +51,7 @@ func (s *reposService) CreateRepo(input repositories.CreateRepoRequest)(*reposit
 	if err != nil{
 		return nil, errors.NewApiError(err.StatusCode, err.Message)
 	}
+
 
 	result := repositories.CreateRepoResponse{
 		Id: response.Id,
@@ -68,6 +72,7 @@ func (s *reposService) CreateRepos(requests []repositories.CreateRepoRequest)(re
 
 	for _, current := range requests{
 		wg.Add(1)
+		fmt.Println(current)
 		go s.createRepoConcurrent(current, input)
 	}
 
